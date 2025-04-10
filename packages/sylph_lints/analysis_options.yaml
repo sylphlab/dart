@@ -1,0 +1,55 @@
+# This file defines the lint rules exported by the sylph_lints package.
+# Projects using sylph_lints should include this file in their own analysis_options.yaml:
+# include: package:sylph_lints/analysis_options.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-raw-types: true
+  errors:
+    # Treat most warnings as errors, but allow TODOs as warnings
+    todo: warning
+    dead_code: error
+    # Add other errors to enforce here if needed
+
+linter:
+  rules:
+    # Start with recommended lints (implicitly included by projects using this)
+    # Then add stricter rules or customizations:
+    - prefer_final_locals
+    - prefer_const_constructors
+    - avoid_dynamic_calls
+    - avoid_returning_null_for_future
+    - require_trailing_commas
+    - prefer_single_quotes # Example preference
+    - unnecessary_parenthesis
+    - unnecessary_statements
+    - package_prefixed_library_names
+    - directives_ordering
+    - always_declare_return_types
+    - avoid_empty_else
+    - avoid_relative_lib_imports
+    - avoid_shadowing_type_parameters
+    - avoid_types_as_parameter_names
+    - await_only_futures
+    - control_flow_in_finally
+    - empty_statements
+    - hash_and_equals
+    - literal_only_boolean_expressions
+    - no_duplicate_case_values
+    - prefer_conditional_assignment
+    - prefer_final_fields
+    - prefer_for_elements_to_map_fromIterable
+    - prefer_generic_function_type_aliases
+    - prefer_if_null_operators
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_null_aware_operators
+    - type_init_formals
+    - unawaited_futures # Important for preventing unhandled async errors
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_new
+    - unnecessary_null_in_if_null_operators
+    - use_rethrow_when_possible
+    # Add more rules based on team preference and Effective Dart

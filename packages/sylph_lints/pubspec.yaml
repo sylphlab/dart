@@ -1,0 +1,16 @@
+name: sylph_lints
+description: Shared lint rules for SylphLab Dart projects. Based on recommended lints plus additional strict rules.
+version: 0.1.0
+repository: https://github.com/sylphlab/dart/tree/main/packages/sylph_lints
+homepage: https://github.com/sylphlab/dart
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  # This package likely won't have runtime dependencies
+  meta: ^1.10.0 # Often useful for annotations
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0

@@ -1,0 +1,19 @@
+name: sylph_dart
+
+packages:
+  - packages/**
+
+scripts:
+  analyze:
+    run: melos exec -- dart analyze . --fatal-infos
+    description: Analyze all packages.
+
+  format:
+    run: melos exec -- dart format . --set-exit-if-changed
+    description: Format all packages.
+
+  test:
+    run: melos exec -- dart test
+    description: Run tests in all packages.
+
+  # Add more scripts as needed (e.g., build_runner, publish)
